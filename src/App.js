@@ -2,39 +2,66 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
+  extendTheme
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
+
+import Header from './Components/Header';
+import About from './Components/About';
+import Footer from './Components/Footer';
+import Faq from './Components/Faq';
+import Roadmap from './Components/Roadmap';
+import Team from './Components/Team';
+
+const colors = {
+  primary: {
+    900: '#D0CDE0',
+    800: '#636ED7',
+    700: '##7CC4F4',
+    600: '#D4618D',
+    500: '#D3336D'
+  },
+  secondary: {
+    900: '#01040D',
+    800: '#575761'
+  }
+}
+
+const styles = {
+  global: {
+    'html, body': {
+      color: 'secondary.800',
+      lineHeight: 'tall',
+      fontSize: '16px',
+      backgroundColor: "secondary.900",
+      boxSizing: 'border-box'
+    },
+    a: {
+      fontSize: "20px",
+      textDecoration: "none"
+    }
+  },
+}
+
+const breakpoints = {
+  sm: '385px',
+  md: '768px',
+  lg: '992px',
+  xl: '1200px',
+  '2xl': '1536px',
+}
+
+const theme = extendTheme({ colors,styles, breakpoints})
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+      <Header/>
+      <About/>
+      <Roadmap/>
+      <Faq/>
+      <Team/>
+      <Footer/>
     </ChakraProvider>
   );
 }
