@@ -18,6 +18,7 @@ h1,h2,h3{
     left: 37%;
 }
 
+
 @media screen and (max-width: 992px) {
         .heroImage{
             left: 15%;
