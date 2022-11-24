@@ -34,7 +34,7 @@ const Header = () => {
                         <SiDiscord/>
                     </Center>
 
-                    <Link href='https://nft-mint-staking-dapp.vercel.app/' _hover={{textDecoration: "none"}}>
+                    <Link target={'_blank'} href='https://nft-mint-staking-dapp.vercel.app/' _hover={{textDecoration: "none"}}>
                         <Button bg="blackAlpha.900" color="white" _hover={{bg: "blackAlpha.800"}}>
                             Mint Now
                         </Button>
