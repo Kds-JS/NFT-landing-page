@@ -11,7 +11,7 @@ const Header = () => {
         <header className={styles.header}>
             <img className={styles.heroImage} src={heroImage} alt="image" />
 
-            <Link target={'_blank'} href='https://nft-mint-staking-dapp.vercel.app/' position="absolute" left={{base: "20%", md:"35%", lg:"45%"}}bottom="15%" bg="primary.800" color='white' py='15px' px="25px" _hover={{textDecoration: 'none', bg:'primary.600'}} boxShadow='dark-lg'>
+            <Link target={'_blank'} href="https://testnets.opensea.io/collection/alpha-lions-nft-v2" position="absolute" left={{base: "20%", md:"35%", lg:"45%"}}bottom="15%" bg="primary.800" color='white' py='15px' px="25px" _hover={{textDecoration: 'none', bg:'primary.600'}} boxShadow='dark-lg'>
                 View on Opensea
             </Link>
 
@@ -34,7 +34,7 @@ const Header = () => {
                         <SiDiscord/>
                     </Center>
 
-                    <Link href='#' _hover={{textDecoration: "none"}}>
+                    <Link href='https://nft-mint-staking-dapp.vercel.app/' _hover={{textDecoration: "none"}}>
                         <Button bg="blackAlpha.900" color="white" _hover={{bg: "blackAlpha.800"}}>
                             Mint Now
                         </Button>
