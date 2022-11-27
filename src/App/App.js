@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ChakraProvider,
   Box,
@@ -6,12 +6,13 @@ import {
 } from '@chakra-ui/react';
 
 
-import Header from './Components/Header';
-import About from './Components/About';
-import Footer from './Components/Footer';
-import Faq from './Components/Faq';
-import Roadmap from './Components/Roadmap';
-import Team from './Components/Team';
+import Header from '../Components/Header';
+import About from '../Components/About';
+import Footer from '../Components/Footer';
+import Faq from '../Components/Faq';
+import Roadmap from '../Components/Roadmap';
+import Team from '../Components/Team';
+import Loader from './Loader';
 
 const colors = {
   primary: {
@@ -54,7 +55,19 @@ const breakpoints = {
 const theme = extendTheme({ colors,styles, breakpoints})
 
 function App() {
-  return (
+
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000)
+  }, [])
+
+
+  return loader ? (
+    <Loader/>
+  ) : (
     <ChakraProvider theme={theme}>
       <Header/>
       <About/>

@@ -18,6 +18,32 @@ h1,h2,h3{
     left: 37%;
 }
 
+/**
+  * Basic
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.basic:before {
+    content: '';
+    display: block;
+    height: 50px;
+    width: 50px;
+    -webkit-animation: spin .5s infinite linear;
+            animation: spin .5s infinite linear;
+    border: 6px blue solid;
+    border-left-color: white;
+    border-radius: 100%; }
+  
+  @-webkit-keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg); } }
+  
+  @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg); } }
+
 
 @media screen and (max-width: 992px) {
         .heroImage{
