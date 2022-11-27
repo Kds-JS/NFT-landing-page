@@ -1,4 +1,4 @@
-# NFT-Mint-Staking-DApp
+# NFT-landing-page
 
 [![crypto App](./Asset/home.png)](https://twitter.com/kds_JS)
 
