@@ -133,7 +133,7 @@ const Faq = () => {
                         <h2>
                         <AccordionButton>
                             <Box flex='1' textAlign='left'>
-                            Will Lunartics be minted on ERC-721A?
+                            Will Alpha Lions be minted on ERC-721A?
                             </Box>
                             {isExpanded ? (
                             <GrClose fontSize='25px' />
@@ -143,7 +143,7 @@ const Faq = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                        Yes, Lunartics NFTs will be minted on ERC-721A.
+                        Yes, Alpha Lions NFTs will be minted on ERC-721A.
                         </AccordionPanel>
                     </>
                     )}
